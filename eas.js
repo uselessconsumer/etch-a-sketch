@@ -5,4 +5,12 @@
 //put these divs into .gridContainer
 //make them appear as a grid using flexbox
 
-const gridContainer = document.querySelector(div.gridContainer);
+const gridContainer = document.querySelector('div.gridContainer');
+
+function createGridDiv(){
+    let gridDiv = document.createElement('div');
+    gridDiv.classList.add('gridDiv');
+    gridContainer.appendChild(gridDiv);
+}
+
+createGridDiv();
