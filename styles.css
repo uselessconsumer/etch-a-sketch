@@ -2,10 +2,13 @@
     background-color: pink;
     width: 500px;
     height: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .gridDiv {
     background-color: aqua;
+    box-sizing: border-box;
     width: 25px;
     height: 25px;
     border: 1px solid black;

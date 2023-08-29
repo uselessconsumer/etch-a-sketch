@@ -1,8 +1,6 @@
-//create a 16x16 grid
-//
-
-//put these divs into .gridContainer
 //make them appear as a grid using flexbox
+    //divide the containers width & height by the gridSize (will be the same number)
+    //scale the gridDiv to that size
 
 
 //FOR LATER:
@@ -12,20 +10,25 @@
 
 
 const gridContainer = document.querySelector('div.gridContainer');
-
+let gridDiv;
+let gridSize = 16;
+let gridXY = scaleGridDiv();
 //creates a div to be used as a node in the grid
 function createGridDiv(){
-    let gridDiv = document.createElement('div');
+    gridDiv = document.createElement('div');
     gridDiv.classList.add('gridDiv');
+    gridDiv.style.width = gridXY;
+    gridDiv.style.height = gridXY;
     gridContainer.appendChild(gridDiv);
 }
 
-fillGrid();
 
+function scaleGridDiv() {
+    return 500 / gridSize + 'px';
+}
 
-
-function fillGrid(gridSize) {
-    gridSize = 3;
+//populates the container with the amount of div's needed 
+function fillGrid() {
     let totalDiv = Math.pow(gridSize, 2);
     let divCount = 0;
     do {
@@ -34,4 +37,4 @@ function fillGrid(gridSize) {
     } while (divCount < totalDiv);
 }
 
-
+fillGrid();
