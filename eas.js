@@ -1,6 +1,6 @@
-//make them appear as a grid using flexbox
-    //divide the containers width & height by the gridSize (will be the same number)
-    //scale the gridDiv to that size
+//create an effect that changes the gridDiv colour to black when it has been clicked.
+    //I can either use a class selector
+    //or using JavaScript to change the divs background.
 
 
 const gridContainer = document.querySelector('div.gridContainer');
@@ -11,15 +11,14 @@ let gridSize = 16;
 function createGridDiv(){
     gridDiv = document.createElement('div');
     gridDiv.classList.add('gridDiv');
-    gridDiv.style.width = scaleGridDiv();
-    gridDiv.style.height = scaleGridDiv();
+    gridDiv.setAttribute('id', 'gridNode');
+    gridDiv.style.width = `${scaleGridDiv()}px`;
+    gridDiv.style.height = `${scaleGridDiv()}px`;
     gridContainer.appendChild(gridDiv);
 }
 
 //calculates the value for gridDiv's width+height
-function scaleGridDiv() {
-    return 500 / gridSize + 'px';
-}
+function scaleGridDiv() { return 500 / gridSize; }
 
 //populates the container with the amount of div's needed 
 function fillGrid() {
@@ -32,3 +31,6 @@ function fillGrid() {
 }
 
 fillGrid();
+
+const allGridDiv = document.querySelectorAll('.gridDiv');
+console.log(allGridDiv);
