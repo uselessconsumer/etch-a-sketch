@@ -44,3 +44,7 @@ allGridDiv.forEach((div) => {
     });
 });
 
+//add a select tag that allows the user to change the size of the grid depending on the selected grid size
+    //starts on 8x8
+    //when a new value is selected
+    //update the gridsize and refresh the grid to the new size
