@@ -3,26 +3,20 @@
     //scale the gridDiv to that size
 
 
-//FOR LATER:
-//calculate(function) the grid size: for now just do 16 by 16
-    //16 divs will span across and down
-    //determine what size the divs will scale to in order to fill the gridContainer
-
-
 const gridContainer = document.querySelector('div.gridContainer');
 let gridDiv;
 let gridSize = 16;
-let gridXY = scaleGridDiv();
-//creates a div to be used as a node in the grid
+
+//creates a div to be used as a node in the grid and scales it to fit the containers gridSize dimensions
 function createGridDiv(){
     gridDiv = document.createElement('div');
     gridDiv.classList.add('gridDiv');
-    gridDiv.style.width = gridXY;
-    gridDiv.style.height = gridXY;
+    gridDiv.style.width = scaleGridDiv();
+    gridDiv.style.height = scaleGridDiv();
     gridContainer.appendChild(gridDiv);
 }
 
-
+//calculates the value for gridDiv's width+height
 function scaleGridDiv() {
     return 500 / gridSize + 'px';
 }
