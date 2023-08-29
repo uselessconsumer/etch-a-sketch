@@ -1,12 +1,3 @@
-//create an effect that changes the gridDiv colour to black when it has been clicked.
-    //I can either use a class selector
-    //or using JavaScript to change the divs background.
-
-
-//change the bg color of the div when clicked, or when the mouse is being clicked and is dragged over a div
-    //
-
-
 const gridContainer = document.querySelector('div.gridContainer');
 let gridDiv;
 let gridSize = 16;
@@ -41,8 +32,9 @@ let toggle = false;
 document.addEventListener('mousedown', () => toggle = true);
 document.addEventListener('mouseup', () => toggle = false);
 
-//selects all divs in the grid
+//selects all div's in the grid
 const allGridDiv = document.querySelectorAll('.gridDiv');
+
 allGridDiv.forEach((div) => {
     div.addEventListener('mousedown', () => div.style.backgroundColor = 'black');
     div.addEventListener('mouseover', () => {
