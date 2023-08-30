@@ -2,7 +2,7 @@ const gridContainer = document.querySelector('div.gridContainer');
 let gridDiv;
 let gridSize = 16;
 
-const buttons = document.querySelectorAll('.gridSize > button');
+const buttons = document.querySelectorAll('.gridBtn > button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
