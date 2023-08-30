@@ -12,9 +12,7 @@ buttons.forEach((button) => {
     });
 });
 
-
-
-//clears all coloured divs leaving the grid size the same
+//clears all coloured div'ss leaving the grid size the same
 function clearColor() {
     const toBeCleared = document.querySelectorAll('.gridDiv');
 
@@ -50,6 +48,26 @@ function createGridDiv(){
 //calculates the value for gridDiv's width+height
 function scaleGridDiv() { return 500 / gridSize; }
 
+
+//default toggles for color buttons when launched
+let blackToggle = true;
+let rainbowToggle = false;
+
+const rainbow = document.querySelector('.rainbow');
+rainbow.addEventListener('click', () => {
+    rainbowToggle = true;
+    blackToggle = false;
+    toDraw();
+});
+
+const black = document.querySelector('.black');
+black.addEventListener('click', () => {
+    blackToggle = true;
+    rainbowToggle = false;
+    toDraw();
+});
+
+
 //creates the ability to 'draw' in the container
 function toDraw() {
     //creates a toggled to determine if the mouse is being held down
@@ -57,16 +75,36 @@ function toDraw() {
     document.addEventListener('mousedown', () => toggle = true);
     document.addEventListener('mouseup', () => toggle = false);
 
+
+    function randomColor() {
+        let maxVal = 0xFFFFFF;
+        let randNumber = Math.random() * maxVal;
+    
+        randNumber = Math.floor(randNumber);
+        randNumber = randNumber.toString(16);
+        let randColor = randNumber.padStart(6, 0);
+        return `#${randColor.toUpperCase()}`
+    }
+
     //selects all div's in the grid
     const allGridDiv = document.querySelectorAll('.gridDiv');
 
     allGridDiv.forEach((div) => {
-        div.addEventListener('mousedown', () => div.style.backgroundColor = 'black');
-        div.addEventListener('mouseover', () => {
-            if (toggle === true){
-                div.style.backgroundColor = 'black';
-            };
-        });
+        if (blackToggle === true) {
+            div.addEventListener('mousedown', () => div.style.backgroundColor = '#000000');
+            div.addEventListener('mouseover', () => {
+                if (toggle === true){
+                    div.style.backgroundColor = '#000000';
+                };
+            });
+        } else if (rainbowToggle === true) {
+            div.addEventListener('mousedown', () => div.style.backgroundColor = randomColor());
+            div.addEventListener('mouseover', () => {
+                if (toggle === true){
+                    div.style.backgroundColor = randomColor();
+                };
+            });
+        }
     });
 }
 
