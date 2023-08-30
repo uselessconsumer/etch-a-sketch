@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ADLaM+Display">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <script src="eas.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Etch-A-Sketch</h1>
-
-    <div class="gridSize">
-        <p>Grid Size:</p>
-        <button id="16">16 &#215; 16</button>
-        <button id="32">32 &#215; 32</button>
-        <button id="64">64 &#215; 64</button>
+    <div class="title">
+        <h1>Etch-A-Sketch</h1>
     </div>
-    <button class="clear">Clear</button>
-    <button class="black">Black</button>
-    <button class="rainbow">Rainbow</button>
-    
-    <div class="gridContainer"></div>
+
+    <div class="gameCase">
+
+        <div class="gridContainer"></div>
+
+        <div class="colour">
+            <p>Colour:</p>
+            <div>
+                <button class="black">Black</button>
+                <button class="rainbow">Rainbow</button>
+            </div>
+        </div> 
+
+        <div class="gridSize">
+            <p>Grid Size:</p>
+            <div>
+                <button id="16">16 &#215; 16</button>
+                <button id="32">32 &#215; 32</button>
+                <button id="64">64 &#215; 64</button>
+            </div>
+        </div>
+
+        <div class="clearDiv">
+            <button class="clear">Clear</button>
+        </div>
+
+    </div>
 </body>
 </html>

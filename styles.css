@@ -1,9 +1,25 @@
+h1 {
+    text-align: center;
+    font-family: 'ADLaM Display', sans-serif;
+    color: rgb(47, 42, 36);
+    font-size: 50px;
+}
+
+.title {
+    background-color: blanchedalmond;
+    margin: auto;
+    width: 400px;
+    border-radius: 10px;
+}
+
 .gridContainer {
     background-color: pink;
     width: 500px;
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+    outline: 5px solid rgb(110, 110, 123);
+    margin: 0;
 }
 
 .gridDiv {
@@ -14,3 +30,83 @@
     border: 1px solid rgba(0, 0, 0, .25);
 }
 
+.gameCase {
+    background-color: cornflowerblue;
+    margin: auto;
+    padding-top: 10px;
+    border-radius: 25px;
+    width: 600px;
+    height: 815px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.colour {
+    margin-top: 15px;
+    text-align: center;
+    width: 250px;
+    box-sizing: border-box;
+}
+
+.gridSize {
+    text-align: center;
+    width: 350px;
+}
+
+.gridSize > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.colour > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.colour > p, .gridSize > p {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 88);
+    font-weight: 500;
+    margin: 10px 0;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+.black, .rainbow {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background-color: pink;
+    border: 2px solid rgb(248, 152, 152);
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gridSize > div > button {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background-color: rgb(192, 243, 255);
+    border: 2px solid rgb(152, 224, 248);
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearDiv {
+    margin-top: 25px;
+}
+
+.clearDiv > button {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    color: white;
+    background-color: rgb(151, 151, 151);
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
