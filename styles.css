@@ -1,3 +1,7 @@
+body {
+    background-image: url("purplestars.gif");
+}
+
 h1 {
     text-align: center;
     font-family: 'ADLaM Display', sans-serif;
@@ -31,7 +35,7 @@ h1 {
 }
 
 .gameCase {
-    background-color: cornflowerblue;
+    background-color: rgb(248, 255, 167);
     margin: auto;
     padding-top: 10px;
     border-radius: 25px;
