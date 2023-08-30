@@ -2,7 +2,7 @@ const gridContainer = document.querySelector('div.gridContainer');
 let gridDiv;
 let gridSize = 16;
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.gridSize > button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -11,6 +11,20 @@ buttons.forEach((button) => {
         fillGrid();
     });
 });
+
+
+
+//clears all coloured divs leaving the grid size the same
+function clearColor() {
+    const toBeCleared = document.querySelectorAll('.gridDiv');
+
+    toBeCleared.forEach((div) => {
+        div.style.backgroundColor = 'white';
+    });
+}
+const clearBtn = document.querySelector('.clear');
+clearBtn.addEventListener('click', () => { clearColor() })
+
 
 //populates the container with the amount of div's needed 
 function fillGrid() {
